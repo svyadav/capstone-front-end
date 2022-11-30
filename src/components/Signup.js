@@ -10,10 +10,10 @@ const Signup = () => {
     lastName: "",
     email: "",
     password: "",
-  });
+  }); 
   const navigate = useNavigate();
   const handleSignup = async () => {
-    let res = await axios.post("http://localhost:5000/users/signup", member);
+    let res = await axios.post("https://capstone-6pkp.onrender.com/users/signup", member);
     alert("Signup successful");
     navigate("/");
   };

@@ -14,7 +14,8 @@ const Login = () => {
     const navigate=useNavigate()
  
     const google = () => {
-    window.open("http://localhost:5000/auth/google", "_self");
+    window.open("https://capstone-6pkp.onrender.com/auth/google", "_self");
+    
   };
   const github = () => {
     window.open("http://localhost:5000/auth/github", "_self");
@@ -29,7 +30,7 @@ const Login = () => {
 
   const handleLogin=async()=>{
     setToggle(true)
-    let res=await axios.post("http://localhost:5000/users/signin",{
+    let res=await axios.post("https://capstone-6pkp.onrender.com/users/signin",{
       email,password
     
     })
