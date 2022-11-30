@@ -13,7 +13,7 @@ const Signup = () => {
   }); 
   const navigate = useNavigate();
   const handleSignup = async () => {
-    let res = await axios.post("http://capstone-6pkp.onrender.com/users/signup", member);
+    let res = await axios.post("https://capstone-6pkp.onrender.com/users/signup", member);
     alert("Signup successful");
     navigate("/");
   };
