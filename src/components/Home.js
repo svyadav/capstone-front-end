@@ -7,12 +7,12 @@ import Button from 'react-bootstrap/Button';
 const Home=()=>{
     const [user, setUser] = useState(null);
     const logout = () => {
-        window.open("https://capstone-6pkp.onrender.com/auth/logout", "_self");
+        window.open("http://localhost:5000/auth/logout", "_self");
         
       };
     useEffect(() => {
         const getUser = () => {
-          fetch("https://capstone-6pkp.onrender.com/auth/login/success", {
+          fetch("http://localhost:5000/auth/login/success", {
             method: "GET",
             credentials: "include",
             headers: {
