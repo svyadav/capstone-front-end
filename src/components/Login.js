@@ -5,7 +5,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios"
 import { FaGoogle,FaGithub,FaFacebook } from "react-icons/fa";
 import Spinner from 'react-bootstrap/Spinner';
-import Cookies from 'universal-cookie';
 import { serverUrl } from "../config";
 
 const Login = () => {
