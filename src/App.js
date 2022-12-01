@@ -7,7 +7,6 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Dash from './components/Dash';
 
-
 function App() {
 
   return (

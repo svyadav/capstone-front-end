@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { serverUrl } from "../config";
+
+
 const Signup = () => {
   const [member, setMember] = useState({
     firstName: "",
@@ -13,7 +16,7 @@ const Signup = () => {
   }); 
   const navigate = useNavigate();
   const handleSignup = async () => {
-    let res = await axios.post("http://localhost:5000/users/signup", member);
+    let res = await axios.post(`${serverUrl}/users/signup`, member);
     alert("Signup successful");
     navigate("/");
   };
