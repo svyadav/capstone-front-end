@@ -4,7 +4,8 @@ import Button from "react-bootstrap/Button";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-const serverUrl = process.env.REACT_APP_SERVERL_URL
+import { serverUrl } from "../config";
+
 
 const Signup = () => {
   const [member, setMember] = useState({

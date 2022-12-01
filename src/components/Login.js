@@ -6,7 +6,7 @@ import axios from "axios"
 import { FaGoogle,FaGithub,FaFacebook } from "react-icons/fa";
 import Spinner from 'react-bootstrap/Spinner';
 import Cookies from 'universal-cookie';
-const serverUrl = process.env.REACT_APP_SERVERL_URL
+import { serverUrl } from "../config";
 
 const Login = () => {
     const [email,setEmail]=useState("")

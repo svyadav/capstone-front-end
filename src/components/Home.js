@@ -1,8 +1,7 @@
 import React from "react"
 import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
-
-const serverUrl = process.env.REACT_APP_SERVERL_URL
+import { serverUrl } from "../config";
 
 const Home=()=>{
     const [user, setUser] = useState(null);
