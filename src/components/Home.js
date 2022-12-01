@@ -1,7 +1,7 @@
 import React from "react"
 import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
-import { serverUrl } from "../config";
+import { serverUrl,clientUrl } from "../config";
 
 const Home=()=>{
     const [user, setUser] = useState(null);
@@ -18,6 +18,7 @@ const Home=()=>{
               Accept: "application/json",
               "Content-Type": "application/json",
               "Access-Control-Allow-Credentials": true,
+              "Access-Control-Allow-Origin": clientUrl
             },
           })
             .then((response) => {
