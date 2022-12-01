@@ -2,17 +2,17 @@ import React from "react"
 import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 
-
+const serverUrl = process.env.REACT_APP_SERVERL_URL
 
 const Home=()=>{
     const [user, setUser] = useState(null);
     const logout = () => {
-        window.open("http://localhost:5000/auth/logout", "_self");
+        window.open(`${serverUrl}/auth/logout`, "_self");
         
       };
     useEffect(() => {
         const getUser = () => {
-          fetch("http://localhost:5000/auth/login/success", {
+          fetch(`${serverUrl}/auth/login/success`, {
             method: "GET",
             credentials: "include",
             headers: {

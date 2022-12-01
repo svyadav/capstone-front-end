@@ -6,6 +6,8 @@ import axios from "axios"
 import { FaGoogle,FaGithub,FaFacebook } from "react-icons/fa";
 import Spinner from 'react-bootstrap/Spinner';
 import Cookies from 'universal-cookie';
+const serverUrl = process.env.REACT_APP_SERVERL_URL
+
 const Login = () => {
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
@@ -14,15 +16,15 @@ const Login = () => {
     const navigate=useNavigate()
  
     const google = () => {
-    window.open("http://localhost:5000/auth/google", "_self");
+    window.open(`${serverUrl}/auth/google`, "_self");
     
   };
   const github = () => {
-    window.open("http://localhost:5000/auth/github", "_self");
+    window.open(`${serverUrl}/auth/github`, "_self");
   };
 
   const facebook = () => {
-    window.open("http://localhost:5000/auth/facebook", "_self");
+    window.open(`${serverUrl}/auth/facebook`, "_self");
   };
 
 
@@ -30,7 +32,7 @@ const Login = () => {
 
   const handleLogin=async()=>{
     setToggle(true)
-    let res=await axios.post("http://localhost:5000/users/signin",{
+    let res=await axios.post(`${serverUrl}/users/signin`,{
       email,password
     
     })
